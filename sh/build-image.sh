@@ -9,3 +9,7 @@ echo "Build an image ..."
 docker build -t vadimivlev/ibclientportal:1.0.0 -f Dockerfile . 
 echo "Clean up ..."
 rm -rf clientportal.gw
+
+echo "push the image "
+docker login
+docker push vadimivlev/ibclientportal:1.0.0
